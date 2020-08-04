@@ -36,9 +36,28 @@ public class IPersistenceTest {
         User all = userDao.findByCondition(user);
         System.out.println(all);
 
+        Integer id = 4;
+        user.setId(id);
+        user.setUsername("王五");
+        int result = userDao.add(user);
+        System.out.println("add result = " + result);
 
+        all = userDao.findByCondition(user);
+        System.out.println(all);
 
+        user.setUsername("amao");
+        result = userDao.update(user);
+        System.out.println("update result = " + result);
 
+        all = userDao.findByCondition(user);
+        System.out.println(all);
+
+        user.setId(id);
+        result = userDao.delete(user);
+        System.out.println("delete result = " + result);
+
+        all = userDao.findByCondition(user);
+        System.out.println(all);
     }
 
 

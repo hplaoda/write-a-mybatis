@@ -14,7 +14,7 @@ public interface IUserDao {
     public User findByCondition(User user) throws Exception;
 
     //根据条件进行用户查询
-    public int delete(Integer id) throws Exception;
+    public int delete(User id) throws Exception;
 
     //根据条件进行用户查询
     public int update(User user) throws Exception;
