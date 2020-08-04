@@ -36,7 +36,7 @@ public class IPersistenceTest {
         User all = userDao.findByCondition(user);
         System.out.println(all);
 
-        Integer id = 4;
+        Integer id = 5;
         user.setId(id);
         user.setUsername("王五");
         int result = userDao.add(user);
@@ -56,8 +56,6 @@ public class IPersistenceTest {
         result = userDao.delete(user);
         System.out.println("delete result = " + result);
 
-        all = userDao.findByCondition(user);
-        System.out.println(all);
     }
 
 
